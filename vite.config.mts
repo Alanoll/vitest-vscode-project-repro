@@ -34,6 +34,11 @@ export default defineConfig(({ mode }) => {
     }
   };
 
+  ///
+  // This triggers the bug.
+  //
+  return projectConfig;
+
   //
   // This config works as expected, but the project-based config above does not.
   //
@@ -59,5 +64,8 @@ export default defineConfig(({ mode }) => {
     }
   };
 
+  //
+  // This works as expected.
+  //
   return singleConfig;
 });
