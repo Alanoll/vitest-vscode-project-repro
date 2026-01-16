@@ -13,6 +13,9 @@ export default defineConfig(({ mode }) => {
     }
   };
 
+  //
+  // This triggers the bug.
+  //
   return projectsConfig;
 
   const projectConfig: UserConfig = {
@@ -30,7 +33,7 @@ export default defineConfig(({ mode }) => {
               }),
               enabled: true,
               headless: true,
-              ui: false,
+              ui: true,
               instances: [
                 { browser: 'chromium' }
               ],
@@ -44,8 +47,8 @@ export default defineConfig(({ mode }) => {
     }
   };
 
-  ///
-  // This triggers the bug.
+  //
+  // This works as expected.
   //
   return projectConfig;
 
@@ -78,4 +81,6 @@ export default defineConfig(({ mode }) => {
   // This works as expected.
   //
   return singleConfig;
+
+
 });
