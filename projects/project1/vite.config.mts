@@ -5,9 +5,6 @@ import { playwright } from '@vitest/browser-playwright';
 import { defineProject, UserWorkspaceConfig } from 'vitest/config';
 export default defineProject(({ mode }) => {
   const config: UserWorkspaceConfig =  {
-    esbuild: {
-      target: 'es2022'
-    },
     test: {
       name: 'project1',
       browser: {

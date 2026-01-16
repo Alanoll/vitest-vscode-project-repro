@@ -5,6 +5,16 @@ import { UserConfig } from 'vite';
 import { defineConfig } from 'vitest/config';
 
 export default defineConfig(({ mode }) => {
+  const projectsConfig: UserConfig = {
+    test: {
+      projects: [
+        'projects/*',
+      ],
+    }
+  };
+
+  return projectsConfig;
+
   const projectConfig: UserConfig = {
     test: {
       projects: [
